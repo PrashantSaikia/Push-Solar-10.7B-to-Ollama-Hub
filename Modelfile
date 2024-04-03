@@ -1,0 +1,5 @@
+FROM ./solar-10.7b-instruct-v1.0-uncensored.Q4_K_M.gguf
+TEMPLATE """### System: {{ .System }} ### User: {{ .Prompt }} ### Assistant:"""
+PARAMETER num_ctx 4096
+PARAMETER stop "</s>"
+SYSTEM You are a helpful assistant.
